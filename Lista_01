@@ -1,0 +1,95 @@
+-------Lista de Exercicios---------------------------
+CAPÍTULO 1 - A LINGUAGEM DA LÓGICA PROPOSICIONAL
+Exercícios: 1, 2, 3, 4, 5, 6, 7, 8 e 10.
+1) a) (P Q ∨ P10.000) - Não é uma formula.
+
+b) (P ∧ Q) → ((Q ↔️ P) ∨ ¬¬R) - É uma fórmula 
+
+c)¬¬P - É uma fórmula
+
+d)vQ - Não é uma fórmula 
+
+e) (P ∧ Q) → ((Q ↔️ ¬R)) - É uma fórmula 
+
+2)a) Existe fórmula sem símbolo de pontuação?
+Sim, um símbolo de verdade e uma formula e por exemplo P é uma fórmula.
+
+b) Quantos tipos de símbolos possui o alfabeto da Lógica Proposicional?
+Quais são esses símbolos?
+Temos 3 símbolos. Símbolos de pontuação: (e), Símbolo de verdade: true, false, Símbolos proposicionais: p, Q, R, S ......
+
+c) Existe fórmula da Lógica Proposicional com algum conectivo, mas sem
+símbolo de pontuação?
+Não sempre e necessário ter uma fórmula, para se ter um conectivo.
+
+3) a)  ((¬¬P ∨ Q) ↔️ (P → Q)) ∧ P10.000:
+H = ((¬¬P ∨ Q) ↔️ (P → Q)) ∧ P10.000
+Comp[H] = Comp[((¬¬P ∨ Q) ↔️ (P → Q)) ∧ P10.000]
+Comp[H] = Comp[((¬¬P ∨ Q) ↔️ (P → Q))] + Comp[P10.000] + 1
+comp[H] = Comp[((¬¬P ∨ Q)] + Comp[(P → Q))] + 1 + 1 + 1
+Comp[H] = Comp[(¬¬P ∨ Q)] + Comp[P] + Comp[Q] +1 + 3
+Comp[H] = Comp[¬¬P] + Comp[Q] + 1 + 4
+Comp[H] = Comp[¬P] + 1 + 1 + 5
+Comp[H] = Comp[P] + 1 + 7
+Comp[H] = 1 + 8 
+Comp[H] = 9
+
+Subfórmulas:[((¬¬P ∨ Q) ↔️ (P → Q)) ∧ P10.000], [((¬¬P ∨ Q) ↔️ (P → Q))],[P10.000],[((¬¬P ∨ Q)], [(P → Q))], [P], [Q], [¬¬P], [¬P]
+
+b) P → ((Q → R) → ((P → R) → (P → R)))
+H = P → ((Q → R) → ((P → R) → (P → R)))
+Comp[H] = Comp[P → ((Q → R) → ((P → R) → (P → R)))]
+Comp[H] = Comp[((Q → R) → ((P → R) → (P → R)))] + Comp[P] + 1
+Comp[H]= Comp[ ((P → R) → (P → R)))] + Comp[((Q → R)] + 1 + 2
+Comp[H]= Comp[ ((P → R) → (P → R)))] + Comp[Q] + Comp[R] + 1 + 3
+Comp[H] = comp[((P → R)] + Comp[(P → R)] + 1 + 6
+Comp[H] = Comp[(P → R)] + Comp[P] + Comp[R] + 1 + 7
+Comp[H] = Comp[P] + Comp[R] + 1 + 1 + 1 + 8
+Comp[H] = 1 + 1 + 11
+Comp[H] = 13
+
+Subformulas:[P → ((Q → R) → ((P → R) → (P → R)))],[((Q → R) → ((P → R) → (P → R)))],[ ((P → R) → (P → R)))],[((Q → R)],[((P → R)],[Q],[R],[P]
+
+c) ((P → ¬P) ↔️ ¬P) ∨ Q
+H =  ((P → ¬P) ↔️ ¬P) ∨ Q
+Comp[H] = Comp[ ((P → ¬P) ↔️ ¬P) ∨ Q]
+Comp[H] = Comp[(P → ¬P) ↔️ ¬P)] + Comp[Q] + 1
+Comp[H] = Comp[(P → ¬P)] + Comp[¬P] + 1 +1 + 1
+Comp[H] = Comp[P] + Comp[¬P] + 1 + 1 + Comp[P] + 3
+Comp[H] = 1 + Comp[P] + 1 + 2 + 1 + 3
+Comp[H] = 9
+
+Subformulas:[ ((P → ¬P) ↔️ ¬P) ∨ Q],[(P → ¬P) ↔️ ¬P)],[(P → ¬P)],[¬P], [P], [Q]
+
+d) ¬(P → ¬P)
+H =  ¬(P → ¬P)
+Comp[H] = Comp[ ¬(P → ¬P)]
+Comp[H] = Comp[(P → ¬P)] + 1
+Comp[H] = Comp[P] + Comp[¬P] + 1 + 1
+Comp[H] = Comp[P] + Comp[P] + 1 + 2
+Comp[H] = 1 + 1 + 3
+Comp[H] = 5
+
+Subformulas:[ ¬(P → ¬P)], [(P → ¬P)], [¬P], [P]
+
+4)(a) ((¬(¬P)) ↔️ ((¬((¬(¬(P ∨ Q))) → R)) ∧ P))
+     ((¬(¬P)) ↔️ ((¬((¬¬(P ∨ Q)) → R)) ∧ P))
+             ((¬(¬P)) ↔️ (¬(¬¬(P ∨ Q) → R) ∧ P))
+     ((¬¬P) ↔️ (¬(¬¬(P ∨ Q) → R) ∧ P))
+             (¬¬P ↔️ (¬(¬¬(P ∨ Q) → R) ∧ P))
+      ¬¬P) ↔️ (¬(¬¬(P ∨ Q) → R) ∧ P)
+
+(b) (¬P → (Q ∨ R)) ↔️ ((P ∧ Q) ↔️ (¬¬R ∨ ¬P))
+   (¬P → (Q ∨ R)) ↔️ (P ∧ Q) ↔️ (¬¬R ∨ ¬P)
+
+(c) ((P ∨ Q) → (P → (¬Q)))
+        ((P ∨ Q) → (P → ¬Q))
+   ((P ∨ Q) → P → ¬Q)
+       (P ∨ Q) → P → ¬Q
+
+5)(a) P ∨ ¬Q → R ↔️ ¬R
+     (P V (¬Q → (R ↔️ ¬R)))
+
+(b) Q → ¬P ∧ Q
+   Q → (¬P) ∧ Q
+   (Q → (¬P)) ∧ Q
